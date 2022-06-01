@@ -78,8 +78,8 @@ public class Function {
 
     /*
     FUNCTION 6:
-        INPUT: int[] arr
-        OUTPUT: Sum of all elements in the array
+        INPUT: radius
+        OUTPUT: Draw a circle with * and radius
     */
     public static void printCircle(int r){
         double dist;
