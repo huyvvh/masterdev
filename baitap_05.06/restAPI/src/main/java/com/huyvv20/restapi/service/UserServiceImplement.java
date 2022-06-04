@@ -1,5 +1,4 @@
 package com.huyvv20.restapi.service;
-
 import com.huyvv20.restapi.exception.DuplicateRecException;
 import com.huyvv20.restapi.exception.NotFoundException;
 import com.huyvv20.restapi.model.User;
@@ -18,8 +17,6 @@ public class UserServiceImplement implements IUserService{
     @Autowired
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-
-
     @Override
     public List<User> getAllUsers() {
         return this.userRepository.findAll();
@@ -38,7 +35,7 @@ public class UserServiceImplement implements IUserService{
         if(user != null){
             for(int i=0; i<checkUser.size(); i++){
                 if(user.getEmail().equals(checkUser.get(i).getEmail())){
-                    throw new DuplicateRecException("Email is already exit!!! ");
+                    throw new DuplicateRecException("Email is already exit!!!");
                 }
             }
         } else {
