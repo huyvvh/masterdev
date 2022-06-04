@@ -1,5 +1,6 @@
 package com.huyvv20.restapi.service;
 
+import com.huyvv20.restapi.exception.DuplicateRecException;
 import com.huyvv20.restapi.exception.NotFoundException;
 import com.huyvv20.restapi.model.User;
 import com.huyvv20.restapi.repository.UserRepository;
@@ -33,8 +34,15 @@ public class UserServiceImplement implements IUserService{
 
     @Override
     public User addUser(User user) {
-        if(user == null){
-            throw new NullPointerException("User is null");
+        List<User> users = this.userRepository.findAll();
+        if(user != null){
+            for(int i = 0; i<users.size(); i++){
+                if(user.getEmail().equals(users.get(i).getEmail())){
+                    throw new DuplicateRecException("Email is already exits :");
+                }
+            }
+        } else{
+            throw new NullPointerException("User is null!!!");
         }
         this.save(user);
         return user;
@@ -43,7 +51,7 @@ public class UserServiceImplement implements IUserService{
     @Override
     public User updateUser(long id, User user) {
         if(id<1){
-            throw new NotFoundException("ID not found");
+            throw new NotFoundException("ID not found!!!");
         }
         if(user != null){
             User user1 = userRepository.getById(id);
@@ -53,6 +61,8 @@ public class UserServiceImplement implements IUserService{
 
                 this.save(user1);
             }
+        } else {
+            throw new NullPointerException("User is null !!!");
         }
 
         return null;
@@ -74,7 +84,7 @@ public class UserServiceImplement implements IUserService{
     @Override
     public User getOneUser(long id) {
         if(id<1){
-            throw new NotFoundException("ID not found");
+            throw new NotFoundException("ID not found!!! ");
         }
         return this.save(userRepository.getById(id));
     }
