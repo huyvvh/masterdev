@@ -14,7 +14,7 @@ public class UserController {
     private IUserService iUserService;
 
     //Done test
-    @GetMapping("getone/{id}")
+    @GetMapping("/getone/{id}")
     public User getOneUser(@PathVariable("id") long id) {
         return iUserService.getOneUser(id);
     }
@@ -32,7 +32,7 @@ public class UserController {
     }
 
     //Done test
-    @PutMapping("update/{id}")
+    @PutMapping("/update/{id}")
     public User updateUser(@PathVariable("id") long id, @RequestBody User user){
         return this.iUserService.updateUser(id, user);
     }

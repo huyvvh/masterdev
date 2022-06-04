@@ -42,6 +42,9 @@ public class UserServiceImplement implements IUserService{
 
     @Override
     public User updateUser(long id, User user) {
+        if(id<1){
+            throw new NotFoundException("ID not found");
+        }
         if(user != null){
             User user1 = userRepository.getById(id);
             if(user1 != null){
@@ -70,6 +73,9 @@ public class UserServiceImplement implements IUserService{
 
     @Override
     public User getOneUser(long id) {
+        if(id<1){
+            throw new NotFoundException("ID not found");
+        }
         return this.save(userRepository.getById(id));
     }
 }
