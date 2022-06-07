@@ -1,0 +1,20 @@
+{
+  "namespace": "example.avro",
+  "type": "record",
+  "name": "Employee",
+  "fields": [
+    {"name": "name", "type": "string"},
+    {"name": "id", "type": "int"},
+    {"name": "sex",  "type": "string"},
+    {"name": "age", "type": "int"},
+    {"name": "address", "type": "string"},
+    {"name": "salary", "type": {
+      "type": "record",
+      "name": "Salary",
+      "fields": [
+        {"name": "netSalary", "type": "int"},
+        {"name": "tax", "type": "int"}
+      ]
+    }}
+  ]
+}
