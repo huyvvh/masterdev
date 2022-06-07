@@ -1,0 +1,7 @@
+example\avro\Employee.class
+example\avro\Employee$1.class
+org\example\Main.class
+example\avro\Salary$Builder.class
+example\avro\Salary$1.class
+example\avro\Employee$Builder.class
+example\avro\Salary.class
