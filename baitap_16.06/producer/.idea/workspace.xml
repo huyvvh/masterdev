@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="334ccab3-b3ee-41b2-b592-2eb6eca905c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/data/result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/huyvv20/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/huyvv20/schema/customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/target/classes/com/huyvv20/Consumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/target/classes/com/huyvv20/schema/customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_database_16.06/database/src/main/java/com/huyvv20/WriteToCSVSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../baitap_07.06/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../baitap_07.06/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../baitap_07.06/src/main/resources/employee-test.avro" beforeDir="false" afterPath="$PROJECT_DIR$/../../baitap_07.06/src/main/resources/employee-test.avro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../baitap_07.06/target/classes/employee-test.avro" beforeDir="false" afterPath="$PROJECT_DIR$/../../baitap_07.06/target/classes/employee-test.avro" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ANiFIASW5LFrdK8zeZV8OuBoRZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/masterdev/baitap_16.06/producer",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\masterdev\baitap_16.06\producer_consumer\target" />
+      <recent name="E:\masterdev\baitap_16.06\producer_consumer\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Producer">
+    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.huyvv20.Consumer" />
+      <module name="producer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.huyvv20.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.huyvv20.Producer" />
+      <module name="producer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.huyvv20.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Producer" />
+        <item itemvalue="Application.Consumer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="334ccab3-b3ee-41b2-b592-2eb6eca905c9" name="Changes" comment="" />
+      <created>1654856340539</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654856340539</updated>
+      <workItem from="1654856341680" duration="3910000" />
+      <workItem from="1654867534093" duration="8024000" />
+      <workItem from="1655086056430" duration="13253000" />
+      <workItem from="1655127966326" duration="855000" />
+      <workItem from="1655128844405" duration="9806000" />
+      <workItem from="1655140247718" duration="4904000" />
+      <workItem from="1655171954222" duration="1405000" />
+      <workItem from="1655173691699" duration="8812000" />
+      <workItem from="1655193596659" duration="9296000" />
+      <workItem from="1655279273729" duration="118000" />
+      <workItem from="1655323439928" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
