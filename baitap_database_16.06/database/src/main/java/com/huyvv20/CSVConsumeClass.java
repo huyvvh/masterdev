@@ -10,9 +10,9 @@ import static java.lang.Integer.parseInt;
 
 public class CSVConsumeClass {
     public static void main(String[] args){
-        String jdbcUrl = "jdbc:mysql://localhost:8000/masterdev_huyvv20";
-        String username = "root";
-        String password = "Huyvanvo2692001";
+        String jdbcUrl = "jdbc:mysql://172.17.80.26:3306/masterdev_huyvv20";
+        String username = "huyvv20";
+        String password = "74utrFVHBm7uWhVv";
 
         String filePath = "E:/masterdev/baitap_database_16.06/database/data/class.csv";
 

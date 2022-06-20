@@ -16,7 +16,7 @@ public class CSVConsumeUser {
 
         String filePath = "E:/masterdev/baitap_database_16.06/database/data/million.csv";
 
-        int batchSize=20;
+        int batchSize=200;
 
         Connection connection=null;
 
@@ -35,7 +35,7 @@ public class CSVConsumeUser {
             int count = 0;
             lineReader.readLine();
             while((lineText=lineReader.readLine()) != null){
-                String[] data = lineText.split(";");
+                String[] data = lineText.split(",");
 
                 String id = data[0];
                 String usersname = data[1];
