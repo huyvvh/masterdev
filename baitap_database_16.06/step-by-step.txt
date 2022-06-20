@@ -1,0 +1,7 @@
+B1: Build ER Model
+B2: Using ER Model to build Relation Model
+B3: Generate csv file using CSVFileWriter in Java.
+B4: Insert data from CSV file using java-connector-mysql in Java.
+B3: Clean data and create query.
+
+Reference : https://www.codejava.net/coding/java-code-example-to-insert-data-from-csv-to-database
