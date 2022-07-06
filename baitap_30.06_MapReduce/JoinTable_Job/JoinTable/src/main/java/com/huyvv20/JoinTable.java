@@ -83,16 +83,20 @@ public class JoinTable {
 
     public static class JoinReducer extends Reducer<JobKey,
             JoinGenericWritable, NullWritable, Text> {
+        StringBuilder output = new StringBuilder();
+        @Override
+        protected void setup(Reducer<JobKey, JoinGenericWritable, NullWritable, Text>.Context context) throws IOException, InterruptedException {
+            output.append("id,first_name,last_name,age,street,city,state,zip,job,salary \n");
+        }
+
         public void reduce(JobKey key, Iterable<JoinGenericWritable> values,
                            Context context) throws IOException, InterruptedException {
-            StringBuilder output = new StringBuilder();
             String salary = null;
             for (JoinGenericWritable v : values) {
                 Writable record = v.get();
                 if (key.recordType.equals(JobKey.SALARY_RECORD)) {
                     Salary record2 = (Salary) record;
                     salary = record2.salary.toString();
-                    output.append("id,first_name,last_name,age,street,city,state,zip,job,salary\n");
                 } else {
                     People pRecord = (People) record;
                     output.append(pRecord.id.toString()).append(", ");
@@ -133,6 +137,9 @@ public class JoinTable {
 
         job.setSortComparatorClass(JoinSortingComparator.class);
         job.setGroupingComparatorClass(JoinGroupingComparator.class);
+
+        job.setReducerClass(JoinReducer.class);
+        job.setNumReduceTasks(3);
 
         job.setOutputKeyClass(NullWritable.class);
         job.setOutputValueClass(Text.class);
