@@ -13,6 +13,7 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class JoinTable {
     public static class JoinGroupingComparator extends WritableComparator {
@@ -48,14 +49,16 @@ public class JoinTable {
         public void map(LongWritable key, Text value, Context context)
                 throws IOException, InterruptedException {
             String[] recordFields = value.toString().split(",");
-            String job = recordFields[0];
-            int salary = Integer.parseInt(recordFields[1]);
+            if (!Objects.equals(recordFields[0], "job")) {
+                String job = recordFields[0];
+                int salary = Integer.parseInt(recordFields[1]);
 
-            JobKey recordKey = new JobKey(job, JobKey.SALARY_RECORD);
-            Salary record = new Salary(salary);
+                JobKey recordKey = new JobKey(job, JobKey.SALARY_RECORD);
+                Salary record = new Salary(salary);
 
-            JoinGenericWritable genericRecord = new JoinGenericWritable(record);
-            context.write(recordKey, genericRecord);
+                JoinGenericWritable genericRecord = new JoinGenericWritable(record);
+                context.write(recordKey, genericRecord);
+            }
         }
     }
 
@@ -64,20 +67,22 @@ public class JoinTable {
         public void map(LongWritable key, Text value, Context context)
                 throws IOException, InterruptedException {
             String[] recordFields = value.toString().split(",");
-            int id = Integer.parseInt(recordFields[0]);
-            String firstName = recordFields[1];
-            String lastName = recordFields[2];
-            int age = Integer.parseInt(recordFields[3]);
-            String street = recordFields[4];
-            String city = recordFields[5];
-            String state = recordFields[6];
-            int zip = Integer.parseInt(recordFields[7]);
-            String job = recordFields[8];
+            if (!Objects.equals(recordFields[0], "id")) {
+                int id = Integer.parseInt(recordFields[0]);
+                String firstName = recordFields[1];
+                String lastName = recordFields[2];
+                int age = Integer.parseInt(recordFields[3]);
+                String street = recordFields[4];
+                String city = recordFields[5];
+                String state = recordFields[6];
+                int zip = Integer.parseInt(recordFields[7]);
+                String job = recordFields[8];
 
-            JobKey recordKey = new JobKey(job, JobKey.PEOPLE_RECORD);
-            People record = new People(id, firstName, lastName, age, street, city, state, zip);
-            JoinGenericWritable genericRecord = new JoinGenericWritable(record);
-            context.write(recordKey, genericRecord);
+                JobKey recordKey = new JobKey(job, JobKey.PEOPLE_RECORD);
+                People record = new People(id, firstName, lastName, age, street, city, state, zip);
+                JoinGenericWritable genericRecord = new JoinGenericWritable(record);
+                context.write(recordKey, genericRecord);
+            }
         }
     }
 
