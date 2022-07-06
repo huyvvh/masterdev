@@ -1,5 +1,5 @@
-com\huyvv20\WCMapper.class
-com\huyvv20\DistinctMapper.class
 com\huyvv20\WCReducer.class
 com\huyvv20\CountDistinct.class
+com\huyvv20\WCMapper.class
+com\huyvv20\DistinctMapper.class
 com\huyvv20\DistinctReducer.class
