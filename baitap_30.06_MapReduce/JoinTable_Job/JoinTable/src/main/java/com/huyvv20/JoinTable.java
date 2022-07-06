@@ -92,6 +92,7 @@ public class JoinTable {
                 if (key.recordType.equals(JobKey.SALARY_RECORD)) {
                     Salary record2 = (Salary) record;
                     salary = record2.salary.toString();
+                    output.append("id,first_name,last_name,age,street,city,state,zip,job,salary\n");
                 } else {
                     People pRecord = (People) record;
                     output.append(pRecord.id.toString()).append(", ");
