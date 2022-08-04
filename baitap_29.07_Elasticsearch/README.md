@@ -122,7 +122,7 @@ GET /title_suggest_huyvv20/_search
     }
 ```
 
-  - Call request sử dụng Pastman & Spring
+  - Call request sử dụng Postman & Spring
 ```
 http://localhost:8080/get/keyword/size
 ```
