@@ -4,3 +4,4 @@
     - Service File :
         + webserver.service
         + scheduler.service
+    - User/password : admin/1
